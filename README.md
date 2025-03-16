@@ -1,5 +1,4 @@
-
-
+# Context Api With Add To Cart 
 
 
    Logic : Repeat this block for each product

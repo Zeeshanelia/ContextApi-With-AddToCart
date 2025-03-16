@@ -26,9 +26,10 @@ import { CiCirclePlus } from "react-icons/ci";
 
                                 <div className="flex justify-between items-center mt-5 gap-1">
 
-                                    <p className="text-xl font-bold ">$22</p>
-                                    <button className="mt-4 bg-blue-500 text-white font-bold py-2 px-2 rounded-full">
-                                        <CiCirclePlus className="text-white" />
+                                    <p className="text-xl font-bold mb-2 mr-2">$22</p>
+
+                                    <button className="mb-2 mr-2 bg-blue-400 text-white font-bold py-2 px-2 rounded-full">
+                                        <CiCirclePlus className="text-white  " />
                                     </button>
                                 </div>
                             </div>
