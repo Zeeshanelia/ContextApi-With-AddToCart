@@ -23,6 +23,5 @@
                 <div className="text-center text-lg border text-gray-400 rounded-[1rem] py-3   ">
                     Cloth
                 </div>
-        
         </div>
         </>)}

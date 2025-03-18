@@ -3,6 +3,8 @@
 
    Logic : Repeat this block for each product
 
+
+        
            
           {[...Array(4)].map((_, index) => (
          <div key={index} className="bg-white-950 rounded border p-4">
@@ -20,3 +22,18 @@
                     </button>
               </div>
          </div>
+
+
+
+or simple logic
+
+
+      { loading ? (
+        Array.from({ length: 4 }).map(( _ , index) => (
+          <div key={index}> {/* Add key for each skeleton loader */}
+            <Skeleton />
+          </div>))
+        ) : ( products.map((product) => (
+          <ProdCart key={product.id} product={product} />))
+        )
+      }
