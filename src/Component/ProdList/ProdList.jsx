@@ -13,7 +13,7 @@ export const ProdList = () => {
 
 
     <h1 className=" text-center text-2xl text-slate-500 font-medium">Products Section</h1>
-    <div className="items-center justify-center md:flex gap-2 md:w-[55rem] w-3/4 ">
+    <div className=" items-center justify-center md:flex gap-2 md:w-[55rem] w-3/4 ">
 
       {loading ? (
         Array.from({ length: 4 }).map((_, index) => (

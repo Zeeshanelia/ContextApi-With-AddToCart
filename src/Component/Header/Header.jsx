@@ -1,7 +1,11 @@
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
+import { useCart } from "../../Context/CartContext";
+
 export const Header = () => {
+
+    const { cartItems } = useCart()
     return (
         <>
 
@@ -26,10 +30,14 @@ export const Header = () => {
 
 
                     <Link to='/cart'>
-                        <h2 className="text-2xl font-bold mt-1">
-                        <FiShoppingCart />
-                        </h2>
+                        <div className="relative flex items-center">
+                            <FiShoppingCart className="text-2xl font-bold mt-1" />
+                            <sup className="absolute -top-2 -right-2 bg-red-400 text-white rounded-full text-xs w-5 h-5 flex  justify-center">
+                               {cartItems.length}
+                            </sup>
+                        </div>
                     </Link>
+
                 </div>
             </div>
 
