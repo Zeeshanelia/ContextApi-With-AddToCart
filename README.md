@@ -39,3 +39,9 @@ or simple logic
           <ProdCart key={product.id} product={product} />))
         )
       }
+
+
+    
+
+  main css is geting from 2 component  ProList and ProdCart
+  

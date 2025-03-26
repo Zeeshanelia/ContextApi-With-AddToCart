@@ -4,43 +4,37 @@ import { FiShoppingCart } from "react-icons/fi";
 import { useCart } from "../../Context/CartContext";
 
 export const Header = () => {
+    const { cartItems } = useCart();
 
-    const { cartItems } = useCart()
     return (
-        <>
+        <div className="flex justify-between items-center mx-auto md:w-[70rem] w-full p-4">
+            {/* Logo */}
+            <Link to="/">
+                <h2 className="text-xl md:text-2xl font-bold">E-Shop</h2>
+            </Link>
 
-            <div className="flex justify-between mx-auto md:w-[70rem] w-full p-6">
+            {/* Search and Cart Section */}
+            <div className="flex gap-4 items-center">
+                {/* Search Bar */}
+                <div className="relative flex items-center">
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        className="border rounded-full p-2 md:w-44 w-32 h-8 focus:outline-none"
+                    />
+                    <FaSearch className="absolute right-2 top-2 text-gray-500" />
+                </div>
 
-                <Link to='/'>
-                    <div>
-                        <h2 className="flex md:text-2xl font-bold md:ml-4 ">E-Shop</h2>
+                {/* Cart Icon */}
+                <Link to="/cart">
+                    <div className="relative flex items-center">
+                        <FiShoppingCart className="text-2xl font-bold" />
+                        <sup className="absolute -top-2 -right-2 bg-red-400 text-white rounded-full text-xs w-5 h-5 flex justify-center items-center">
+                            {cartItems.length}
+                        </sup>
                     </div>
                 </Link>
-
-
-
-                <div className="flex gap-2  ">
-                    <div className="relative flex md:gap-2 gap-1 ">
-                        <input
-                            type="text"
-                            placeholder="  Search  "
-                            className="border rounded p-3 md:w-44 w-30 h-8" />
-                        <FaSearch className="absolute md:left-36 left-44 top-2 text-gray-500" />
-                    </div>
-
-
-                    <Link to='/cart'>
-                        <div className="relative flex items-center">
-                            <FiShoppingCart className="text-2xl font-bold mt-1" />
-                            <sup className="absolute -top-2 -right-2 bg-red-400 text-white rounded-full text-xs w-5 h-5 flex  justify-center">
-                               {cartItems.length}
-                            </sup>
-                        </div>
-                    </Link>
-
-                </div>
             </div>
-
-        </>
+        </div>
     );
 };
