@@ -4,10 +4,7 @@ React Shopping App ｜ React Modern ecommerce ｜ React Shopping Cart with Conte
 
 
    Logic : Repeat this block for each product
-
-
-        
-           
+                   
           {[...Array(4)].map((_, index) => (
          <div key={index} className="bg-white-950 rounded border p-4">
          <img src="img/sho.png"  alt="Product" className=" h-[10rem] rounded"/>
@@ -44,4 +41,56 @@ or simple logic
     
 
   main css is geting from 2 component  ProList and ProdCart
+
+
+  fix this issue
   
+     NOT_FOUND  
+     Code: NOT_FOUND
+     ID: bom1::rpz9b-1742989393993-8d85a1c21cef
+  
+
+
+
+ 1. Create a vercel.json file at your project root with:
+
+  
+{                                 json 
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
+
+
+
+
+Option B: Add a _redirects File
+In your public folder, create a _redirects file with:
+
+           /* /index.html 200
+
+2. Verify Build Settings in Vercel
+Ensure your Vercel project settings are correct:
+
+Build Command: npm run build (or yarn build)
+
+Output Directory: build (default for Create React App) or your framework's output folder.
+
+
+3. Check homepage in package.json
+If using React Router, add this to your package.json to prevent path mismatches:
+
+
+
+        {                          json
+         "homepage": "./"
+        }
+
+4. Test Locally
+Test the production build locally to catch issues early:
+
+npm run build
+serve -s build
+Visit http://localhost:5173/ and test navigation.
+
