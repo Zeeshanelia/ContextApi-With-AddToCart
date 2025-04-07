@@ -1,6 +1,10 @@
 # Context Api With Add To Cart 
-
 React Shopping App ｜ React Modern ecommerce ｜ React Shopping Cart with Context Api ｜ Shopping App
+An eCommerce React app built with ContextAPI provides a centralized state management solution for handling user interactions and cart functionality. The app allows users to add products to their cart by clicking the "Add to Cart" button, which triggers an action in the Context API to update the cart state. Users can also remove items from the cart with a delete button, which adjusts the cart state accordingly. Context API ensures that the cart data is accessible across all components without the need for prop drilling. Additionally, the app features dynamic updates to the cart icon, reflecting the number of items added. The context helps keep the shopping experience seamless and efficient, even when the cart state changes. This approach improves scalability and organization within the React app for managing global state.
+
+
+
+
 
 
    Logic : Repeat this block for each product
